@@ -1,0 +1,32 @@
+# gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --allow-partial=true --word-symbol-table=exp/tri1/graph/words.txt exp/tri1/final.mdl exp/tri1/graph/HCLG.fst "ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split1/1/utt2spk scp:data/test/split1/1/cmvn.scp scp:data/test/split1/1/feats.scp ark:- | add-deltas  ark:- ark:- |" "ark:|gzip -c > exp/tri1/decode/lat.1.gz" 
+# Started at Mon Jun 26 10:49:52 HKT 2017
+#
+gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --allow-partial=true --word-symbol-table=exp/tri1/graph/words.txt exp/tri1/final.mdl exp/tri1/graph/HCLG.fst 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split1/1/utt2spk scp:data/test/split1/1/cmvn.scp scp:data/test/split1/1/feats.scp ark:- | add-deltas  ark:- ark:- |' 'ark:|gzip -c > exp/tri1/decode/lat.1.gz' 
+add-deltas ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/test/split1/1/utt2spk scp:data/test/split1/1/cmvn.scp scp:data/test/split1/1/feats.scp ark:- 
+LOG (apply-cmvn:main():apply-cmvn.cc:146) Applied cepstral mean normalization to 10 utterances, errors on 0
+xiaoyan_en-10_5_8 ten five eight 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance xiaoyan_en-10_5_8 is -6.37784 over 180 frames.
+xiaoyan_en-1_4_3 one four three 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance xiaoyan_en-1_4_3 is -6.31926 over 182 frames.
+xiaoyan_en-2_3_5 two three five 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance xiaoyan_en-2_3_5 is -6.6501 over 174 frames.
+xiaoyan_en-2_6_10 two six ten 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance xiaoyan_en-2_6_10 is -6.70952 over 176 frames.
+xiaoyan_en-3_2_1 three two one 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance xiaoyan_en-3_2_1 is -6.80558 over 172 frames.
+xiaoyan_en-3_7_10 three seven ten 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance xiaoyan_en-3_7_10 is -6.60377 over 194 frames.
+xiaoyan_en-4_9_8 four nine eight 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance xiaoyan_en-4_9_8 is -6.13766 over 184 frames.
+xiaoyan_en-5_6_3 five six three 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance xiaoyan_en-5_6_3 is -6.2708 over 194 frames.
+xiaoyan_en-6_2_8 six two eight 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance xiaoyan_en-6_2_8 is -6.5293 over 180 frames.
+xiaoyan_en-9_10_8 nine ten eight 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance xiaoyan_en-9_10_8 is -6.28155 over 180 frames.
+LOG (gmm-latgen-faster:main():gmm-latgen-faster.cc:175) Time taken 0.351262s: real-time factor assuming 100 frames/sec is 0.0193426
+LOG (gmm-latgen-faster:main():gmm-latgen-faster.cc:178) Done 10 utterances, failed for 0
+LOG (gmm-latgen-faster:main():gmm-latgen-faster.cc:180) Overall log-likelihood per frame is -6.46455 over 1816 frames.
+# Accounting: time=0 threads=1
+# Ended (code 0) at Mon Jun 26 10:49:52 HKT 2017, elapsed time 0 seconds

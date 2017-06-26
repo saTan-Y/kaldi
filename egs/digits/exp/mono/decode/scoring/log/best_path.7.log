@@ -1,0 +1,28 @@
+# lattice-best-path --lm-scale=7 --word-symbol-table=data/lang/words.txt "ark:gunzip -c exp/mono/decode//lat.*.gz|" ark,t:exp/mono/decode//scoring/7.tra 
+# Started at Mon Jun 26 10:49:43 HKT 2017
+#
+lattice-best-path --lm-scale=7 --word-symbol-table=data/lang/words.txt 'ark:gunzip -c exp/mono/decode//lat.*.gz|' ark,t:exp/mono/decode//scoring/7.tra 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance xiaoyan_en-10_5_8, best cost 174.198 + 13649.1 = 13823.2 over 180 frames.
+xiaoyan_en-10_5_8 ten five eight 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance xiaoyan_en-1_4_3, best cost 144.524 + 13223.6 = 13368.1 over 182 frames.
+xiaoyan_en-1_4_3 one four three 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance xiaoyan_en-2_3_5, best cost 146.567 + 13355 = 13501.6 over 174 frames.
+xiaoyan_en-2_3_5 two three five 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance xiaoyan_en-2_6_10, best cost 155.81 + 13934.6 = 14090.5 over 176 frames.
+xiaoyan_en-2_6_10 two six ten 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance xiaoyan_en-3_2_1, best cost 143.019 + 13637.3 = 13780.3 over 172 frames.
+xiaoyan_en-3_2_1 three two one 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance xiaoyan_en-3_7_10, best cost 152.835 + 14672.9 = 14825.7 over 194 frames.
+xiaoyan_en-3_7_10 three seven ten 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance xiaoyan_en-4_9_8, best cost 138.097 + 13500.7 = 13638.8 over 184 frames.
+xiaoyan_en-4_9_8 four nine eight 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance xiaoyan_en-5_6_3, best cost 158.751 + 14204.7 = 14363.4 over 194 frames.
+xiaoyan_en-5_6_3 five six three 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance xiaoyan_en-6_2_8, best cost 151.563 + 13840.4 = 13992 over 180 frames.
+xiaoyan_en-6_2_8 six two eight 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance xiaoyan_en-9_10_8, best cost 139.253 + 13402 = 13541.2 over 180 frames.
+xiaoyan_en-9_10_8 nine ten eight 
+LOG (lattice-best-path:main():lattice-best-path.cc:124) Overall cost per frame is 76.5005 = 0.828533 [graph] + 75.6719 [acoustic] over 1816 frames.
+LOG (lattice-best-path:main():lattice-best-path.cc:128) Done 10 lattices, failed for 0
+# Accounting: time=0 threads=1
+# Ended (code 0) at Mon Jun 26 10:49:43 HKT 2017, elapsed time 0 seconds

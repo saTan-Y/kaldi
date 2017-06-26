@@ -1,0 +1,20 @@
+# compute-mfcc-feats --verbose=2 --config=conf/mfcc.conf scp,p:exp/make_mfcc/test/wav_test.1.scp ark:- | copy-feats --compress=true ark:- ark,scp:/home/zhangshangyu/kaldi/egs/digits/mfcc/raw_mfcc_test.1.ark,/home/zhangshangyu/kaldi/egs/digits/mfcc/raw_mfcc_test.1.scp 
+# Started at Mon Jun 26 10:49:25 HKT 2017
+#
+copy-feats --compress=true ark:- ark,scp:/home/zhangshangyu/kaldi/egs/digits/mfcc/raw_mfcc_test.1.ark,/home/zhangshangyu/kaldi/egs/digits/mfcc/raw_mfcc_test.1.scp 
+compute-mfcc-feats --verbose=2 --config=conf/mfcc.conf scp,p:exp/make_mfcc/test/wav_test.1.scp ark:- 
+VLOG[2] (compute-mfcc-feats:main():compute-mfcc-feats.cc:178) Processed features for key xiaoyan_en-10_5_8
+VLOG[2] (compute-mfcc-feats:main():compute-mfcc-feats.cc:178) Processed features for key xiaoyan_en-1_4_3
+VLOG[2] (compute-mfcc-feats:main():compute-mfcc-feats.cc:178) Processed features for key xiaoyan_en-2_3_5
+VLOG[2] (compute-mfcc-feats:main():compute-mfcc-feats.cc:178) Processed features for key xiaoyan_en-2_6_10
+VLOG[2] (compute-mfcc-feats:main():compute-mfcc-feats.cc:178) Processed features for key xiaoyan_en-3_2_1
+VLOG[2] (compute-mfcc-feats:main():compute-mfcc-feats.cc:178) Processed features for key xiaoyan_en-3_7_10
+VLOG[2] (compute-mfcc-feats:main():compute-mfcc-feats.cc:178) Processed features for key xiaoyan_en-4_9_8
+VLOG[2] (compute-mfcc-feats:main():compute-mfcc-feats.cc:178) Processed features for key xiaoyan_en-5_6_3
+VLOG[2] (compute-mfcc-feats:main():compute-mfcc-feats.cc:178) Processed features for key xiaoyan_en-6_2_8
+LOG (compute-mfcc-feats:main():compute-mfcc-feats.cc:177) Processed 10 utterances
+VLOG[2] (compute-mfcc-feats:main():compute-mfcc-feats.cc:178) Processed features for key xiaoyan_en-9_10_8
+LOG (compute-mfcc-feats:main():compute-mfcc-feats.cc:181)  Done 10 out of 10 utterances.
+LOG (copy-feats:main():copy-feats.cc:101) Copied 10 feature matrices.
+# Accounting: time=0 threads=1
+# Ended (code 0) at Mon Jun 26 10:49:25 HKT 2017, elapsed time 0 seconds
