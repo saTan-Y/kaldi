@@ -17,14 +17,6 @@ echo
 echo "===== PREPARING ACOUSTIC DATA ====="
 echo
 
-# Needs to be prepared by hand (or using self written scripts): 
-#
-# spk2gender  [<speaker-id> <gender>]
-# wav.scp     [<uterranceID> <full_path_to_audio_file>]
-# text        [<uterranceID> <text_transcription>]
-# utt2spk     [<uterranceID> <speakerID>]
-# corpus.txt  [<text_transcription>]
-
 # Making spk2utt files
 utils/utt2spk_to_spk2utt.pl data/train/utt2spk > data/train/spk2utt
 utils/utt2spk_to_spk2utt.pl data/test/utt2spk > data/test/spk2utt
@@ -35,8 +27,8 @@ echo
 
 # Making feats.scp files
 mfccdir=mfcc
-#utils/validate_data_dir.sh data/train     # script for checking if prepared data is all right
-#utils/fix_data_dir.sh data/train          # tool for data sorting if something goes wrong above
+#utils/validate_data_dir.sh data/train
+#utils/fix_data_dir.sh data/train          
 steps/make_mfcc.sh --nj $nj --cmd "$train_cmd" data/train exp/make_mfcc/train $mfccdir
 steps/make_mfcc.sh --nj $nj --cmd "$train_cmd" data/test exp/make_mfcc/test $mfccdir
 
@@ -47,13 +39,6 @@ steps/compute_cmvn_stats.sh data/test exp/make_mfcc/test $mfccdir
 echo
 echo "===== PREPARING LANGUAGE DATA ====="
 echo
-
-# Needs to be prepared by hand (or using self written scripts): 
-#
-# lexicon.txt            [<word> <phone 1> <phone 2> ...]        
-# nonsilence_phones.txt  [<phone>]
-# silence_phones.txt     [<phone>]
-# optional_silence.txt   [<phone>]
 
 # Preparing language data
 utils/prepare_lang.sh data/local/dict "<UNK>" data/local/lang data/lang
