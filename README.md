@@ -1,4 +1,4 @@
-A simple ASR system recognizing digits based on http://kaldi-asr.org/doc/kaldi_for_dummies.html <br>
+A simple ASR system recognizing digits referring to http://kaldi-asr.org/doc/kaldi_for_dummies.html <br>
 For running this project, please execute following command on the terminal.<br>
 <br>
 cd egs/digits<br>
